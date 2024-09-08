@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #161616d8, #0004ffda);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ajusta o layout para que o relógio e a data fiquem empilhados */
+}
+
+.relogio, .data {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #000000;
+}
+
+#ano{
+    font-size: 50px;
+}
+
+.relogio div, .data div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, .9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 50px;
+    letter-spacing: 3px;
+}
+
+.relogio span, .data span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo, .data span.tempo {
+    font-size: 10px;
+}
+
+.data {
+    margin-top: 20px;
+}
+
+.theme-toggle-btn{
+    margin: 20px;
+    margin-left: 500px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.theme-toggle-btn i{
+    color: black;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.theme-toggle-btn i:hover{
+    transform: scale(1.10);
+}
+
+/* Tema escuro */
+body.dark-mode {
+    background: linear-gradient(120deg, #000000, #333333); /* Gradiente preto para o tema escuro */
+}
+
+body.dark-mode .relogio div, 
+body.dark-mode .data div {
+    background: rgba(0, 0, 0, .9); 
+    color: #fff; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .9);
+}
+
+body.dark-mode .theme-toggle-btn i {
+    color: white;
+}
+
+body.dark-mode .relogio, .data{
+    box-shadow: 0 0 10px #000000;
+}
